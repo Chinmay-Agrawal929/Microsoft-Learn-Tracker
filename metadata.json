@@ -1,0 +1,6 @@
+{
+  "name": "Interactive Learning Path Tracker",
+  "description": "Interactive Microsoft Learn path tracker with visual roadmap graphs, prerequisite engine, live progress sync, Copilot AI study assistant, and Microsoft Fluent styling.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

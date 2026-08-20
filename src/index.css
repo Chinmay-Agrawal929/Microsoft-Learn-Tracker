@@ -1,0 +1,209 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@layer base {
+  * {
+    border-color: var(--color-neutral-200);
+  }
+  .dark * {
+    border-color: var(--color-neutral-800);
+  }
+}
+
+/* Custom Animation Utilities for Microsoft Copilot & Energy Connectors */
+@keyframes iridescent-spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes energy-pulse {
+  0%, 100% {
+    opacity: 0.4;
+    filter: drop-shadow(0 0 2px rgba(0, 120, 212, 0.4));
+  }
+  50% {
+    opacity: 1;
+    filter: drop-shadow(0 0 8px rgba(0, 120, 212, 0.9));
+  }
+}
+
+@keyframes copilot-shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+.animate-copilot-shimmer {
+  background: linear-gradient(90deg, #0078D4 0%, #8B5CF6 30%, #EC4899 60%, #0078D4 100%);
+  background-size: 200% auto;
+  animation: copilot-shimmer 4s linear infinite;
+}
+
+.animate-energy-pulse {
+  animation: energy-pulse 2.5s ease-in-out infinite;
+}
+
+/* Hide scrollbar for clean horizontal tabs on mobile */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+:root.neon {
+  --color-neutral-50: var(--color-indigo-50);
+  --color-neutral-100: var(--color-indigo-100);
+  --color-neutral-200: var(--color-indigo-200);
+  --color-neutral-300: var(--color-indigo-300);
+  --color-neutral-400: var(--color-indigo-400);
+  --color-neutral-500: var(--color-indigo-500);
+  --color-neutral-600: var(--color-indigo-600);
+  --color-neutral-700: var(--color-indigo-700);
+  --color-neutral-800: #1a0b2e;
+  --color-neutral-900: #0f0518;
+  --color-neutral-950: #05010a;
+
+  --color-blue-50: var(--color-fuchsia-50);
+  --color-blue-100: var(--color-fuchsia-100);
+  --color-blue-200: var(--color-fuchsia-200);
+  --color-blue-300: var(--color-fuchsia-300);
+  --color-blue-400: var(--color-fuchsia-400);
+  --color-blue-500: #ff00ff;
+  --color-blue-600: #cc00cc;
+  --color-blue-700: var(--color-fuchsia-700);
+  --color-blue-800: var(--color-fuchsia-800);
+  --color-blue-900: var(--color-fuchsia-900);
+  --color-blue-950: var(--color-fuchsia-950);
+}
+
+/* Quantum Mechanics Animations & Mesh Gradients */
+@keyframes quantum-orbit {
+  0% { transform: rotate(0deg) scale(1); }
+  50% { transform: rotate(180deg) scale(1.05); }
+  100% { transform: rotate(360deg) scale(1); }
+}
+
+@keyframes wave-interference {
+  0% { opacity: 0.3; transform: scale(0.9) translate(0, 0); }
+  33% { opacity: 0.6; transform: scale(1.1) translate(10px, -10px); }
+  66% { opacity: 0.4; transform: scale(0.95) translate(-10px, 10px); }
+  100% { opacity: 0.3; transform: scale(0.9) translate(0, 0); }
+}
+
+@keyframes float-subtle {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+  100% { transform: translateY(0); }
+}
+
+.animate-quantum-orbit {
+  animation: quantum-orbit 8s linear infinite;
+}
+
+.animate-wave-interference {
+  animation: wave-interference 6s ease-in-out infinite alternate;
+}
+
+.animate-float-subtle {
+  animation: float-subtle 4s ease-in-out infinite;
+}
+
+.quantum-mesh-bg {
+  background: 
+    radial-gradient(circle at 15% 50%, rgba(0, 120, 212, 0.08), transparent 40%),
+    radial-gradient(circle at 85% 30%, rgba(139, 92, 246, 0.08), transparent 40%),
+    radial-gradient(circle at 50% 80%, rgba(236, 72, 153, 0.05), transparent 50%);
+}
+
+.dark .quantum-mesh-bg {
+  background: 
+    radial-gradient(circle at 15% 50%, rgba(0, 120, 212, 0.15), transparent 40%),
+    radial-gradient(circle at 85% 30%, rgba(139, 92, 246, 0.15), transparent 40%),
+    radial-gradient(circle at 50% 80%, rgba(236, 72, 153, 0.1), transparent 50%);
+}
+
+.neon .quantum-mesh-bg {
+  background: 
+    radial-gradient(circle at 15% 50%, rgba(255, 0, 255, 0.15), transparent 40%),
+    radial-gradient(circle at 85% 30%, rgba(0, 255, 255, 0.15), transparent 40%),
+    radial-gradient(circle at 50% 80%, rgba(139, 92, 246, 0.1), transparent 50%);
+}
+
+/* Glassmorphism FX Flow style */
+.glass-panel {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.dark .glass-panel {
+  background: rgba(15, 15, 15, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.neon .glass-panel {
+  background: rgba(15, 5, 24, 0.6);
+  border: 1px solid rgba(255, 0, 255, 0.1);
+  box-shadow: 0 4px 32px rgba(255, 0, 255, 0.05);
+}
+
+/* CHROME CLASSIC (BLUE) */
+:root.chrome-classic {
+  --color-neutral-50: var(--color-blue-50);
+  --color-neutral-100: var(--color-blue-100);
+  --color-neutral-200: var(--color-blue-200);
+  --color-neutral-800: #1a365d;
+  --color-neutral-900: #0f172a;
+  --color-neutral-950: #020617;
+}
+
+/* CHROME MIDNIGHT */
+:root.chrome-midnight {
+  --color-neutral-50: #f8fafc;
+  --color-neutral-800: #1e1b4b;
+  --color-neutral-900: #0f172a;
+  --color-neutral-950: #020617;
+  color-scheme: dark;
+}
+.chrome-midnight {
+  @apply text-white bg-slate-950;
+}
+.chrome-midnight * { border-color: #334155; }
+
+/* CHROME MINT */
+:root.chrome-mint {
+  --color-neutral-50: var(--color-emerald-50);
+  --color-neutral-100: var(--color-emerald-100);
+  --color-neutral-800: var(--color-emerald-900);
+  --color-neutral-900: var(--color-emerald-950);
+  --color-neutral-950: #022c22;
+}
+
+/* CHROME ROSE */
+:root.chrome-rose {
+  --color-neutral-50: var(--color-rose-50);
+  --color-neutral-100: var(--color-rose-100);
+  --color-neutral-800: var(--color-rose-900);
+  --color-neutral-900: var(--color-rose-950);
+  --color-neutral-950: #4c0519;
+}
+
+/* CHROME LAVENDER */
+:root.chrome-lavender {
+  --color-neutral-50: var(--color-purple-50);
+  --color-neutral-100: var(--color-purple-100);
+  --color-neutral-800: var(--color-purple-900);
+  --color-neutral-900: var(--color-purple-950);
+  --color-neutral-950: #2e1065;
+}
